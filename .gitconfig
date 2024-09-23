@@ -1,0 +1,9 @@
+[credential]
+	helper = /usr/bin/git-credential-manager
+[user]
+	name = Ricardo de Vries
+	email = ricardozegt@gmail.com
+[core]
+	autocrlf = false
+[init]
+	defaultBranch = main
