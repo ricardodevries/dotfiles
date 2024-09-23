@@ -27,7 +27,7 @@ set $menu fuzzel --launch-prefix="swaymsg exec --" --terminal="$term"
 
 output eDP-1 resolution 3456x2160 position 0,0
 output DP-4 resolution 1920x1080 position 3456,0
-#output "AOC 27G2G4 0x0002925B" resolution 1920x1080 position 5376,0 transform 270
+output DP-5 resolution 1920x1080 position 5376,0 transform 270
 
 ### Idle configuration
 #
