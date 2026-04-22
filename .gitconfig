@@ -1,0 +1,7 @@
+[user]
+	name = Ricardo de Vries
+	email = ricardozegt@gmail.com
+[core]
+	excludesfile = /Users/Ricardo/.gitignore_global
+[init]
+	defaultBranch = main

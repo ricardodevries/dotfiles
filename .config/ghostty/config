@@ -1,0 +1,15 @@
+term = xterm-256color
+config-file = fonts/monolisa.conf
+theme = catppuccin-mocha.conf
+window-height = 30
+window-width = 130
+window-padding-x = 15
+window-padding-y = 15
+cursor-style = block
+window-padding-color = extend
+window-save-state = never
+adjust-cell-height = 10
+shell-integration = zsh
+shell-integration-features = true
+macos-option-as-alt = true
+macos-non-native-fullscreen = false

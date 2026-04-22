@@ -1,0 +1,11 @@
+brew "bat"
+brew "fzf"
+brew "git"
+brew "starship"
+brew "tmux"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+
+cask "ghostty"
+cask "zed"
