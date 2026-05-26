@@ -1,58 +1,83 @@
 {
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.claude/statusline-command.sh"
-  },
   "model": "claude-opus-4-6",
   "hooks": {
     "PreToolUse": [
       {
         "hooks": [
-          { "type": "command", "command": "~/.claude/hook-pretool.sh" }
+          {
+            "type": "command",
+            "command": "~/.claude/hook-pretool.sh"
+          }
         ]
       }
     ],
     "SubagentStart": [
       {
         "hooks": [
-          { "type": "command", "command": "~/.claude/hook-bg.sh '#0a1a4d'" }
+          {
+            "type": "command",
+            "command": "~/.claude/hook-bg.sh '#0a1a4d'"
+          }
         ]
       }
     ],
     "SubagentStop": [
       {
         "hooks": [
-          { "type": "command", "command": "~/.claude/hook-bg.sh '#003d3d'" }
+          {
+            "type": "command",
+            "command": "~/.claude/hook-bg.sh '#003d3d'"
+          }
         ]
       }
     ],
     "Notification": [
       {
         "hooks": [
-          { "type": "command", "command": "~/.claude/hook-bg.sh '#4d0a0a' Blow" }
+          {
+            "type": "command",
+            "command": "~/.claude/hook-bg.sh '#4d0a0a' Blow"
+          }
         ]
       }
     ],
     "PostToolUseFailure": [
       {
         "hooks": [
-          { "type": "command", "command": "~/.claude/hook-bg.sh '#4d0a0a' Sosumi" }
+          {
+            "type": "command",
+            "command": "~/.claude/hook-bg.sh '#4d0a0a' Sosumi"
+          }
         ]
       }
     ],
     "Stop": [
       {
         "hooks": [
-          { "type": "command", "command": "~/.claude/hook-bg.sh '#2e2414' Blow" }
+          {
+            "type": "command",
+            "command": "~/.claude/hook-bg.sh '#2e2414' Blow"
+          }
         ]
       }
     ],
     "SessionEnd": [
       {
         "hooks": [
-          { "type": "command", "command": "~/.claude/hook-bg.sh default" }
+          {
+            "type": "command",
+            "command": "~/.claude/hook-bg.sh default"
+          }
         ]
       }
     ]
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "awaySummaryEnabled": false,
+  "tui": "fullscreen",
+  "theme": "auto",
+  "verbose": true
 }
