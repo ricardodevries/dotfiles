@@ -2,6 +2,8 @@ eval "$(starship init zsh)"
 source <(fzf --zsh)
 
 alias cat="bat --paging=never"
+alias tmux-main="tmux new -A -s main"
+alias tmux-ai="tmux new -A -s AI"
 
 # Set the DOTNET_ROOT environment variable to the correct path for Zed
 export DOTNET_ROOT=/opt/homebrew/opt/dotnet/libexec
