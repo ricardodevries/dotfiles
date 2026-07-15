@@ -1,3 +1,4 @@
+fpath=(/opt/homebrew/opt/zsh/share/zsh/functions $fpath)
 eval "$(starship init zsh)"
 source <(fzf --zsh)
 
