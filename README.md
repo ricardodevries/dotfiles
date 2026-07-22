@@ -17,7 +17,6 @@ ln -sfn ~/Developer/dotfiles/.zshenv ~/.zshenv
 ln -sfn ~/Developer/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sfn ~/Developer/dotfiles/.config/tmux ~/.config
 ln -sfn ~/Developer/dotfiles/.config/starship.toml ~/.config/starship.toml
-ln -sfn ~/Developer/dotfiles/.config/ghostty ~/.config/ghostty
 ln -sfn ~/Developer/dotfiles/.config/zed ~/.config/zed
 ln -sfn ~/Developer/dotfiles/.claude/hook-bg.sh ~/.claude/hook-bg.sh
 ln -sfn ~/Developer/dotfiles/.claude/hook-pretool.sh ~/.claude/hook-pretool.sh
