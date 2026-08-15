@@ -13,21 +13,23 @@ export DOTNET_ROOT_ARM64=/opt/homebrew/opt/dotnet/libexec
 export PATH=/opt/homebrew/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$HOME/.lmstudio/bin:$DOTNET_ROOT:$HOME/.cargo/bin:$HOME/Library/pnpm/bin:$PATH
 
 claude-local() {
-  if [ $# -lt 1 ]; then
-    echo "Error: model name required" >&2
+  if [ $# -lt 2 ]; then
+    echo "Usage: claude-local <model-name> <context-length> [claude-args...]" >&2
     return 1
   fi
 
   local model="$1"
-  shift
+  local context_length="$2"
+  shift 2
 
   CLAUDE_CODE_SUBAGENT_MODEL="$model" \
+  CLAUDE_CODE_MAX_CONTEXT_TOKENS="$context_length" \
   ANTHROPIC_BASE_URL=http://192.168.1.2:8000 \
   ANTHROPIC_AUTH_TOKEN=dummy \
   ANTHROPIC_DEFAULT_OPUS_MODEL="$model" \
   ANTHROPIC_DEFAULT_SONNET_MODEL="$model" \
   ANTHROPIC_DEFAULT_HAIKU_MODEL="$model" \
-  claude --append-system-prompt 'Language policy: Use English for all user-visible text, including thinking summaries, plans, tool commentary, and final answers. Never infer a language change.' --model "$model" "$@"
+  claude --append-system-prompt '• Communicate in English using a natural, consistent tone. • Do not include disclaimers or apologies; avoid filler, fluff, or “as an AI”. • Prioritize accuracy, clear logic, and actionable results. • When uncertain, ask clarifying questions before generating a response. • Prefer responses in structured formats: bullets, code + test blocks, tables where applicable. Do not use emojis. • If a task requires multi-step reasoning, explicitly break it into steps. • When outputting technical content (e.g., code or commands), include self-checking instructions or simple validation examples.' --model "$model" "$@"
 }
 
 autoload -Uz compinit && compinit
