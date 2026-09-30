@@ -9,7 +9,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_CONFIG_DIR\"/hook-pretool.sh"
+            "command": "~/.claude/hook-pretool.sh"
           }
         ]
       }
@@ -19,7 +19,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_CONFIG_DIR\"/hook-bg.sh '#0a1a4d'"
+            "command": "~/.claude/hook-bg.sh '#0a1a4d'"
           }
         ]
       }
@@ -29,7 +29,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_CONFIG_DIR\"/hook-bg.sh '#003d3d'"
+            "command": "~/.claude/hook-bg.sh '#003d3d'"
           }
         ]
       }
@@ -39,7 +39,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_CONFIG_DIR\"/hook-bg.sh '#4d0a0a' Blow"
+            "command": "~/.claude/hook-bg.sh '#4d0a0a' Blow"
           }
         ]
       }
@@ -49,7 +49,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_CONFIG_DIR\"/hook-bg.sh '#4d0a0a' Sosumi"
+            "command": "~/.claude/hook-bg.sh '#4d0a0a' Sosumi"
           }
         ]
       }
@@ -59,7 +59,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_CONFIG_DIR\"/hook-bg.sh '#2e2414' Blow"
+            "command": "~/.claude/hook-bg.sh '#2e2414' Blow"
           }
         ]
       }
@@ -69,7 +69,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_CONFIG_DIR\"/hook-bg.sh default"
+            "command": "~/.claude/hook-bg.sh default"
           }
         ]
       }
@@ -77,9 +77,17 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "bash \"$CLAUDE_CONFIG_DIR\"/statusline-command.sh"
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
   },
   "feedbackDrafts": "off",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    }
+  },
   "tui": "fullscreen",
   "theme": "auto",
   "verbose": true,

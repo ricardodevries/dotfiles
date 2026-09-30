@@ -3,12 +3,23 @@
 {
   "project_panel": {
     "dock": "left",
+    "default_width": 300,
   },
   "edit_predictions": {
     "provider": "copilot",
   },
   "agent": {
-    "dock": "right",
+    "threads_sidebar_default_width": 360,
+    "default_width": 300,
+    "tool_permissions": {
+      "default": "allow",
+      "tools": {}
+    },
+    "sandbox_permissions": {
+      "allow_unsandboxed": true
+    },
+    "enable_feedback": false,
+    "dock": "left",
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-6-astra",
@@ -18,7 +29,11 @@
     "favorite_models": [],
     "model_parameters": [],
   },
-  "icon_theme": "Zed (Default)",
+  "icon_theme": {
+    "mode": "system",
+    "light": "VSCode Icons for Zed (Dark)",
+    "dark": "Zed (Default)"
+  },
   "theme": {
     "mode": "light",
     "light": "One Light",
@@ -33,7 +48,7 @@
   "agent_ui_font_size": 14,
   "agent_buffer_font_size": 14,
   "buffer_line_height": {
-    "custom": 2.8,
+    "custom": 3.45,
   },
   "toolbar": {
     "breadcrumbs": false,
